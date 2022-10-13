@@ -57,7 +57,12 @@ img {
 }
 .grid_item {
   width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 1rem;
 }
+
+
 @media screen and (min-width: 750px) {
   .container {
     max-width: 1200px;
@@ -65,6 +70,7 @@ img {
     padding: 2rem;
   }
   .grid_item {
+
     width: 100%;
     flex: 1 0 50%;
   }
@@ -75,16 +81,22 @@ img {
 section {
   padding: 5.5rem 0;
 }
-@media screen and (max-width: 749px) {
-  .section-header {
+.section-header {
     text-align: center;
   }
-}
+
 
 .section-title {
   text-transform: uppercase;
   font-size: 3.8rem;
   color: #000;
+}
+@media screen and (min-width: 750px) {
+    .section-title {
+        text-transform: uppercase;
+        font-size: 4.8rem;
+        color: #000;
+      }
 }
 
 .header {
@@ -223,3 +235,51 @@ a:hover {
     margin-top: 3rem;
   }
 }
+/* section services */
+
+.service_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+   
+    border: 2px solid #5b6c78;
+    border-radius: 50%;
+}
+.services {
+    background: #f5f5f5;
+}
+.service_content {
+    flex: 1;
+}
+.services h3 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.service_icon svg {
+    height: 35px;
+}
+@media screen and (max-width: 749px) {
+    
+    .services {
+        text-align: center;
+    }
+    .service_icon {
+        margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 750px){
+    .services {
+        display: flex;
+        align-items: center;
+        
+    }
+    .service_icon {
+        margin:2rem ;
+    }
+
+  }
