@@ -28,6 +28,7 @@ h5,
 h6 {
   color: #000;
   font-family: "poppins", sans-serif;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -70,7 +71,7 @@ li {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .grid_item {
   width: 100%;
@@ -86,8 +87,7 @@ li {
     padding: 2rem;
   }
   .grid_item {
-    width: 100%;
-    flex: 1 0 50%;
+   max-width: 50%;
   }
 }
 
@@ -127,7 +127,7 @@ section {
 }
 /*.navbar {
   display: none;
- }  */
+ } */ 
 .header li {
   display: inline-flex;
   align-items: center;
@@ -214,8 +214,8 @@ svg:hover {
     width: 0;
     height: calc(100vh - 55px);
     background: #f5f5f5;
-    transition: all 0.4s ease-out;
-  }
+    transition: all 0.4s ease-out; 
+  } 
   nav .menu li {
     display: flex;
     justify-content: center;
@@ -236,13 +236,15 @@ svg:hover {
     transform: scale(1.1);
     text-decoration: none;
   }
+  .show-nav .burger .bar {
+    width: 0;
+  }
+
   .burger .bar::before,
   .burger .bar::after {
     transition: all 0.2s ease-out;
   }
-  .show-nav .burger .bar {
-    width: 0;
-  }
+ 
   .show-nav .burger .bar::before {
     transform: rotate(-45deg);
   }
@@ -276,6 +278,7 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .hero_item span {
   text-transform: uppercase;
@@ -287,6 +290,9 @@ svg:hover {
 .hero_item.right {
   animation-duration: 2s;
   animation-name: SlideInRight;
+}
+.hero_avatar img {
+    width: 100%;
 }
 
 @media screen and (max-width: 749px) {
@@ -410,9 +416,16 @@ svg:hover {
 .portfolio .grid_item {
   max-width: 50%;
   margin-bottom: 0;
+  opacity: 1;
+  transition: all 1s ease;
 }
 .portfolio .grid_item.hide {
-    display: none;
+    /* display: none; */
+    opacity: 0;
+    max-width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 .portfolio-filters a {
   color: #333;
@@ -514,7 +527,6 @@ transition: all is ease;
   }
 
 
-
 /* partie card  */
 .card {
   background: #fff;
@@ -522,6 +534,7 @@ transition: all is ease;
   position: relative;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
   border: 1px solid #eee;
+  overflow: hidden;
 }
 .card_inner {
   padding: 2rem;
@@ -533,11 +546,12 @@ transition: all is ease;
 .card_overlay {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  top: 0;
+  
   width: 100%;
   height: 100%;
   z-index: 0;
-  display: none;
+  top: 110%;
+  transition: all 0.3s;
 }
 .card_overlay a {
   font-size: 4.5rem;
@@ -549,7 +563,8 @@ transition: all is ease;
   height: 100%;
 }
 .card:hover .card_overlay {
-display: block;
+
+top: 0;
 }
 /* partie contact  */
 .form {
