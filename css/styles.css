@@ -420,6 +420,10 @@ svg:hover {
     width: 200px;
     height: 200px;
 }
+.modal .card_image_modal{
+    width: 400px;
+    height: 400px;
+}
 
 .portfolio .grid_item {
   max-width: 50%;
