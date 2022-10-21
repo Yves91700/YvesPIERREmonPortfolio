@@ -417,8 +417,8 @@ svg:hover {
   background: #f5f5f5;
 }
 .portfolio img.card_image {
-    width: 250px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 .portfolio .grid_item {
@@ -463,6 +463,10 @@ svg:hover {
   .portfolio .grid_item {
     max-width: 25%;
   }
+  .portfolio img.card_image {
+    width: 250px;
+    height: 300px;
+}
 }
 /* partie modal  */
 
