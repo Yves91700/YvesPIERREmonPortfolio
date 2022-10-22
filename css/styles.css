@@ -253,7 +253,7 @@ svg:hover {
   }
 }
 /* menu nav pour ecran après mobile  */
-@media screen and (min-width: 790px) {
+@media screen and (min-width: 800px) {
   .navbar {
     display: flex;
   }
@@ -411,11 +411,8 @@ font-size: 2rem;
   padding: 1rem;
 }
 
-@media screen and (max-width: 749px) {
-}
 
-@media screen and (min-width: 750px) {
-}
+
 
 /* partie portfolio  */
 
@@ -624,9 +621,10 @@ top: 0;
   cursor: pointer;
   background: #000;
 }
-.form button {
-   
+.contact button {
+   display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     cursor: pointer;
     font-size: 2rem;
@@ -636,6 +634,13 @@ top: 0;
     color: #fff;
     border: none;
     height: 4rem;
+}
+.contact span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 /* partie footer  */
