@@ -157,12 +157,12 @@ svg:hover {
   padding: 0 2px;
 }
 .socials .icon {
-  height: 18px;
+  height: 25px;
 }
 
 @media screen and (min-width: 750px) {
   .socials .icon {
-    height: 24px;
+    height: 30px;
   }
   header a {
     font-size: 2rem;
