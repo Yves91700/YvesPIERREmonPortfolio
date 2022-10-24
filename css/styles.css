@@ -409,6 +409,16 @@ font-size: 2rem;
 .skills .bar {
   background: #5b6c78;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.bar svg {
+    background: #fff;
+    border: 1px solid #eee;
+    /* border-radius: 50%; */
+    
 }
 
 
