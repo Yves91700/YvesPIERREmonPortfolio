@@ -200,7 +200,7 @@ svg:hover {
   transform: translateY(8px);
 }
 /* media queries pour le menu nav pour ecran mobile  */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
   nav {
     display: flex;
     justify-content: center;
@@ -214,7 +214,7 @@ svg:hover {
     width: 0;
     height: calc(100vh - 55px);
     background: #f5f5f5;
-    transition: all 0.4s ease-out; 
+    transition: all 0.2s ease-out; 
   } 
   nav .menu li {
     display: flex;
@@ -253,7 +253,7 @@ svg:hover {
   }
 }
 /* menu nav pour ecran après mobile  */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
   .navbar {
     display: flex;
   }
