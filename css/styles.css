@@ -448,7 +448,7 @@ font-size: 2rem;
     max-width: 0;
     padding: 0;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all .4s ease;
 }
 .portfolio-filters a {
   color: #333;

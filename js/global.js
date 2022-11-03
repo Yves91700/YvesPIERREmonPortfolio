@@ -32,20 +32,25 @@ function tabsFilters() {
 
   const showProjets = (elem) => {
     console.log(elem);
-    projets.forEach((projet) => {
+    projets.forEach(projet => {
       let filter = projet.getAttribute("data-category");
       if (elem === "all") {
         projet.parentNode.classList.remove("hide");
-        return;
+        return
       }
       // ne sera pas prit en compte
-      if (filter !== elem) {
+     /* if (filter !== elem) {
         projet.parentNode.classList.add("hide");
       } else {
         projet.parentNode.classList.remove("hide");
-      }
+      } */
+
+// option pour les plus motivés - opérateur ternaire
+filter !== elem ? projet.parentNode.classList.add('hide') : projet.parentNode.classList.remove('hide');
+
     });
-    tabs.forEach((elem) => {
+  }
+    tabs.forEach(elem => {
       elem.addEventListener("click", (event) => {
         event.preventDefault();
         let filter = elem.getAttribute("data-filter");
@@ -56,8 +61,8 @@ function tabsFilters() {
       });
     });
   };
-  showProjets();
-}
+  // showProjets();
+
 
 tabsFilters();
 
@@ -67,19 +72,19 @@ function showProjetDetails() {
   const btns = document.querySelectorAll(".modal_close");
 
   const hideModals = () => {
-    modals.forEach((modal) => {
+    modals.forEach(modal => {
       modal.classList.remove("show");
     });
   };
 
-  links.forEach((elem) => {
+  links.forEach(elem => {
     elem.addEventListener("click", (event) => {
       event.preventDefault();
       document.querySelector(`[id=${elem.dataset.id}]`).classList.add("show");
     });
   });
 
-  btns.forEach((btn) => {
+  btns.forEach(btn => {
     btn.addEventListener("click", (event) => {
       hideModals();
     });
@@ -105,7 +110,7 @@ const observerIntersectionAnimation = () => {
   });
 
   let sectionObserver = new IntersectionObserver(function (entries, observer) {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         let elem = entry.target;
         elem.style.opacity = 1;
@@ -118,7 +123,7 @@ const observerIntersectionAnimation = () => {
   });
 //fonction l'apparition des barres en pourcentage
   let skillsObserver = new IntersectionObserver(function (entries, observer) {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         let elem = entry.target;
         elem.style.width = elem.dataset.width + "%";
@@ -126,7 +131,7 @@ const observerIntersectionAnimation = () => {
     });
   });
 
-  skills.forEach((skill) => {
+  skills.forEach(skill => {
     skillsObserver.observe(skill);
   });
 };
