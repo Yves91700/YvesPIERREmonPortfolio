@@ -127,7 +127,7 @@ section {
 }
 /*.navbar {
   display: none;
- } */ 
+ /* }  */
 .header li {
   display: inline-flex;
   align-items: center;
@@ -214,8 +214,9 @@ svg:hover {
     width: 0;
     height: calc(100vh - 55px);
     background: #f5f5f5;
-    transition: all 0.2s ease-out; 
+    transition: all .4s ease-out; 
   } 
+
   nav .menu li {
     display: flex;
     justify-content: center;
@@ -224,7 +225,7 @@ svg:hover {
     display: block;
     font-size: 2rem;
     padding: 2rem;
-    transition: all 0.2s;
+    transition: all .4s;
   }
   .show-nav nav {
     opacity: 1;
@@ -242,7 +243,7 @@ svg:hover {
 
   .burger .bar::before,
   .burger .bar::after {
-    transition: all 0.2s ease-out;
+    transition: all .2s ease-out;
   }
  
   .show-nav .burger .bar::before {
@@ -284,11 +285,11 @@ svg:hover {
   text-transform: uppercase;
 }
 .hero_item.left {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-name: SlideInLeft;
 }
 .hero_item.right {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-name: SlideInRight;
 }
 .hero_avatar img {
@@ -663,9 +664,7 @@ top: 0;
     font-size: 2rem;
     padding: 1rem;
 }
-@media screen and (min-width: 750px){
-    
-}
+
 
 /* partie footer  */
 
@@ -714,8 +713,7 @@ footer .socials a:hover {
   color: #333;
 }
 
-@media screen and (max-width: 749px) {
-}
+
 
 @media screen and (min-width: 750px) {
   footer {
