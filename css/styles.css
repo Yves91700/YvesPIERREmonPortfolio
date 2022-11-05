@@ -643,6 +643,12 @@ top: 0;
   cursor: pointer;
   background: #000;
 }
+
+.contact button:hover{
+  cursor: pointer;
+  background: #000;
+}
+
 .contact button {
    display: flex;
     justify-content: center;
